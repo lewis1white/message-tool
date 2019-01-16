@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="/resources/css/index.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="/resources/js/my.js"> </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/resources/js/my.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>JSON Message Editor</title>
+</head>
+
+<body>
+
+  <h1>JSON Message Editor</h1>
+
+  <div id="Messagedropdown">
+    <label>Message type:</label>
+    <select name="message" style="width: 150px; height: 26px" onchange="java_script_:show(this.options[this.selectedIndex].value)">
+      <option value="" selected disabled hidden>Choose here</option>
+      <option value="Linear">Linear</option>
+      <option value="OTT VOD">OTT VOD</option>
+      <option value="PD">PD</option>
+      <option value="PDL VOD">PDL VOD</option>
+      <option value="Rotten Tomatoes">Rotten Tomatoes</option>
+      <option value="PA Schedule">PA Schedule</option>
+      <option value="PA Contributors">PA Contributors</option>
+      <option value="PA Assets">PA Assets</option>
+    </select>
+  </div>
+
+  <div id="hiddenLinearDiv">
+    <form action="linear_page.php" method="get">
+      Service Key: <input type="number" name="LinearServiceKey" min="1000" max="10000" value="3108" required><br>
+      Event Start Date Time: <input type="text" name="LinearStartDate" value="2019-09-28T20:03:00Z" required><br>
+      Event ID: <input type="text" name="LinearEventID" value="13202" required><br>
+      Name: <input type="text" name="LinearName" value="Game of Thrones" required><br>
+      Programme UUID: <input style="width:400px" type="text" name="LinearProgrammeUUID" value="56303aa8-51d4-4eb5-855e-1b1a2aa2154b" required><br>
+      <button type="submit" value="Submit" name="LinearSubmit" class="btn btn-default btn-sm">
+        <span class="glyphicon glyphicon-send"></span> Submit
+      </button>
+    </form>
+  </div>
+
+  <div id="hiddenOTTVODtypeDiv">
+    <div class="OTTdropdown">
+      <label>Type:</label>
+      <select name="type" style="width: 150px; height: 26px" onchange="java_script_:showType(this.options[this.selectedIndex].value)" default="Programme">
+        <option value="" default selected disabled hidden>Choose here</option>
+        <option value="Movie">Movie</option>
+        <option value="Programme">Programme</option>
+      </select>
+    </div>
+  </div><br>
+  <div id="hiddenmovieOTTVODDiv">
+    <form action="ottvodmovie_page.php" method="get">
+      Content ID: <input style="width:300px" type="text" name="OTTMovieContentID" value="VCMID-MOVIE-TOPGUN" required><br>
+      Production Year: <input type="number" name="OTTMovieProductionYear" value="1996" required><br>
+      Title Name Medium: <input type="text" name="OTTMovieTitle" value="Top Gun" required><br>
+      Provider ID: <input type="text" name="OTTMovieProviderID" value="rteplayer1_hd.com" required><br>
+      EPG Date Time: <input style="width:300px" type="text" name="OTTMovieEPGDateTime" value="2019-03-14T05:25:00.000Z" required><br>
+      Lead Service Key: <input type="text" name="OTTMovieServiceKey" value="6000" required><br>
+      <button type="submit" value="Submit" name="OTTMovieSubmit" class="btn btn-default btn-sm">
+        <span class="glyphicon glyphicon-send"></span> Submit
+      </button>
+    </form>
+  </div>
+  <div id="hiddenprogrammeOTTVODDiv">
+    <form action="ottvodprogramme_page.php" method="get">
+      Service Key: <input type="number" name="OTTProgrammeServiceKey" value="1234" required><br>
+      Content ID: <input type="text" name="OTTProgrammeContentID" value="VCMID-MOVIE-GAMEOFTHRONES" required><br>
+      Provider Series ID: <input type="text" name="OTTProgrammeSeriesID" value="VCMID-SERIES-GAMEOFTHRONES1" required><br>
+      Provider Season ID: <input type="text" name="OTTProgrammeSeasonID" value="VCMID-SEASON-GAMEOFTHRONES" required><br>
+      Episode Number: <input type="number" name="OTTProgrammeEpisode" value="1" required><br>
+      Season Number: <input type="number" name="OTTProgrammeSeason" value="1" required><br>
+      Episode Name: <input type="text" name="OTTProgrammeEpisodeName" value="Winter Is Coming" required><br>
+      Title Name Medium: <input type="text" name="OTTProgrammeTitleName" value="GAME OF THRONES" required><br>
+      Provider ID: <input type="text" name="OTTProgrammeProviderID" value="bsky_atlantic" required><br>
+      EPG Date Time: <input type="text" name="OTTProgrammeEPGDateTime" value="2017-07-14T05:25:00.000Z" required><br>
+      Lead Service Key: <input type="text" name="OTTProgrammeLeadServiceKey" value="6000" required><br>
+      <button type="submit" value="Submit" name="OTTProgrammeSubmit" class="btn btn-default btn-sm">
+        <span class="glyphicon glyphicon-send"></span> Submit
+      </button>
+    </form>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+#Messagedropdown{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+#hiddenLinearDiv{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  display: none;
+}
+
+#hiddenOTTVODDiv{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  display: none;
+}
+
+#hiddenOTTVODtypeDiv{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  display: none;
+}
+
+#hiddenmovieOTTVODDiv{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  display: none;
+}
+
+#hiddenprogrammeOTTVODDiv{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  display: none;
+}
+
+input{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  width: 500px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+textarea {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: -100px;
+  top: 50px;
+}
+
+#donebtn{
+  display: none;
+}
